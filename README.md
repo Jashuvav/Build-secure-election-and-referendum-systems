@@ -175,27 +175,29 @@ VoteCastEvent: Emitted when a vote is cast
 PollClosedEvent: Emitted when a poll is closed
 
 🏗️ Project Structure
-text
-votingsystem/
-├── contract/                 # Move smart contract
-│   ├── sources/
-│   │   └── voting.move       # Main voting contract
-│   ├── tests/
-│   │   └── test_end_to_end.move
-│   └── Move.toml
-├── frontend/                 # React frontend
-│   ├── components/          # React components
-│   │   ├── ui/              # Reusable UI components
-│   │   ├── PollCreate.tsx   # Poll creation form
-│   │   ├── PollList.tsx     # Poll listing
-│   │   └── PollDetails.tsx  # Poll details and voting
-│   ├── utils/               # Utility functions
-│   │   ├── votingService.ts # Smart contract integration
-│   │   └── aptosClient.ts   # Aptos client setup
-│   ├── types/               # TypeScript type definitions
-│   └── App.tsx              # Main application component
-├── scripts/                 # Deployment scripts
-└── package.json
+ text
+ 
+ votingsystem/
+ 
+ ├── contract/                
+ │   ├── sources/
+ │   │   └── voting.move     
+ │   ├── tests/
+ │   │   └── test_end_to_end.move
+ │   └── Move.toml
+ ├── frontend/                
+ │   ├── components/          
+ │   │   ├── ui/              
+ │   │   ├── PollCreate.tsx   
+ │   │   ├── PollList.tsx     
+ │   │   └── PollDetails.tsx  
+ │   ├── utils/               
+ │   │   ├── votingService.ts 
+ │   │   └── aptosClient.ts   
+ │   ├── types/               
+ │   └── App.tsx              
+ ├── scripts/                 
+ └── package.json
 🔒 Security Considerations
 Smart Contract Security
 Input validation for all parameters
@@ -218,49 +220,27 @@ Input sanitization and validation
 Secure API key management
 
 🧪 Testing
+
 Smart Contract Tests
-bash
+
 npm run move:test
 Frontend Tests
-bash
+
 npm run test
+
 🚀 Deployment
 Smart Contract Deployment
-bash
+
 # Deploy to testnet
 npm run move:publish
 
 # Deploy to mainnet
 npm run move:publish -- --network mainnet
 Frontend Deployment
-bash
-# Build for production
-npm run build
-
-# Deploy to Vercel
-npm run deploy
-🤝 Contributing
-Fork the repository
-
-Create a feature branch (git checkout -b feature/amazing-feature)
-
-Commit your changes (git commit -m 'Add amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
 
 📄 License
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
-🆘 Support
-If you encounter any issues or have questions:
-
-Check the Issues page
-
-Create a new issue with detailed information
-
-Join our community discussions
 
 🔮 Future Enhancements
 NFT voting certificates
@@ -273,7 +253,6 @@ Poll templates and categories
 
 Analytics dashboard
 
-Mobile app
 
 Integration with other Aptos DeFi protocols
 
@@ -283,7 +262,22 @@ Integration with other Aptos DeFi protocols
 
 0x25064895e3b30d85f34aa33490843140cd79f99c82b058a34cbc51bebdbb2448
 
-(screenshots/Screenshot 2025-08-05 182510.png)confirming the funding transaction on Aptos testnet.)*
+{
+ "Result": {
+    "default": {
+      "network": "Testnet",
+      "has_private_key": true,
+      "public_key": "ed25519-pub-0xbe5357b4040cfd5ece709aa3556419077e44790985ff8d8c20299cbc7a324811",
+      "account": "0624377f2ac9fb92e3507daf88b4a56aeae5a23fabe1af2df52d92a0d43a9aa3",
+      "rest_url": "https://fullnode.testnet.aptoslabs.com"
+    }
+  }
+}
+
+<img width="1716" height="765" alt="Screenshot 2025-08-05 182510" src="https://github.com/user-attachments/assets/d502aa36-1c63-4559-8ef1-2e33f78331b5" />
+
+
+
 
 Built with ❤️ on Aptos Blockchain
 
