@@ -6,11 +6,7 @@ import { ItemsList } from "@/components/ItemsList";
 import { MyItems } from "@/components/MyItems";
 import { User } from "@/types/LostFound";
 
-interface LostFoundTabsProps {
-  user: User;
-}
-
-export function LostFoundTabs({ user }: LostFoundTabsProps) {
+export function LostFoundTabs({ }: { user: User }) {
   const [activeTab, setActiveTab] = useState("browse");
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
@@ -56,7 +52,7 @@ export function LostFoundTabs({ user }: LostFoundTabsProps) {
       </TabsContent>
       
       <TabsContent value="my-items" className="mt-6">
-        <MyItems user={user} refreshTrigger={refreshTrigger} />
+        <MyItems refreshTrigger={refreshTrigger} />
       </TabsContent>
     </Tabs>
   );

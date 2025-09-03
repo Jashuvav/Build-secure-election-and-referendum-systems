@@ -1,12 +1,5 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
-interface ApiResponse<T> {
-  success?: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-}
-
 class ApiClient {
   private baseURL: string;
   private token: string | null = null;
